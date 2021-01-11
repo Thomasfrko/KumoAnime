@@ -4,7 +4,7 @@
 2) Clone the repository, two ways of doing this, if you have git bash enter this command : "git clone https://github.com/Thomasfrko/KumoAnime.git".
 If not, click on the green button "Code" and then Download Zip
 3) If you have downloaded the zip unzip it.
-4) Go in the folder and open the file 'main.js' located in the ressource folder witg any text editor you have.
+4) Go in the folder and open the file 'main.js' located in the ressource folder with any text editor you have.
 5) Edit the variable named "xampp" and place the path to your xampp folder
 6) Save
 
