@@ -18,6 +18,7 @@ class CreateAnimesTable extends Migration
           $table->text('name');
           $table->text('source_image');
           $table->text('original_link');
+          $table->text('tag');
       });
     }
 
