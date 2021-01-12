@@ -6,13 +6,15 @@ const exec = require('child_process').exec
 const BrowserWindow = electron.BrowserWindow
 const app = electron.app
 
-// Modify this varaible to your own XAMPP path folder
+// Modify this variables to your own XAMPP path folder
+//If you have a folder with space in the name, quote the name of the folder, either way nothing will work
 const xampp = 'D:\\Logiciels\\XAMPP'
+const php = xampp + '\\php\\php.exe'
 
 app.on('ready', () => {
   spawn('cmd.exe', [
     '/c',
-    'php',
+    php,
     './resources/app/artisan',
     'config:cache'
   ])
@@ -22,7 +24,7 @@ app.on('ready', () => {
   ])
   spawn('cmd.exe', [
     '/c',
-    'php',
+    php,
     './resources/app/artisan',
     'db:create',
     'anime'
@@ -30,7 +32,7 @@ app.on('ready', () => {
   setTimeout(function () {
     spawn('cmd.exe', [
       '/c',
-      'php',
+      php,
       './resources/app/artisan',
       'migrate'
     ])
@@ -42,7 +44,7 @@ app.on('ready', () => {
 
   spawn('cmd.exe', [
     '/c',
-    'php',
+    php,
     './resources/app/artisan',
     'queue:work'
   ])
